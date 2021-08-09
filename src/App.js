@@ -1,9 +1,14 @@
-import React from 'react';
+import React from 'react'
 import Home from './pages/Home'
+import theme from './theme'
+import {ThemeProvider} from 'styled-components'
+
 function App() {
   return (
-    <Home/>
-  );
+    <ThemeProvider theme={theme}>
+      <Home/>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
