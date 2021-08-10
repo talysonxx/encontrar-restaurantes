@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import logo from '../../assets/logo.svg'
 import TextField, {Input} from '@material/react-text-field'
 import MaterialIcon from '@material/react-material-icon'
-import restaurante from '../../assets/restaurante-fake.png'
+import RestauranteFoto from '../../assets/restaurante-fake.png'
 import Slider from "react-slick"
 import {Container, Search, Logo, Wrapper, Map, TituloCarrosel, Carrosel} from './style'
-import {Card} from '../../components'
+import {Card, CardRestaurante} from '../../components'
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
@@ -35,14 +35,15 @@ const Home = () => {
                     </TextField>
                     <TituloCarrosel>Na sua Área</TituloCarrosel>
                     <Carrosel {...settings}>
-                        <Card photo={restaurante}/>
-                        <Card photo={restaurante}/>
-                        <Card photo={restaurante}/>
-                        <Card photo={restaurante}/>
-                        <Card photo={restaurante}/>
-                        <Card photo={restaurante}/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
+                        <Card photo={RestauranteFoto} title="nothink"/>
                     </Carrosel>
                 </Search>
+                <CardRestaurante/>
             </Container>
             <Map/>
     </Wrapper>
