@@ -4,12 +4,12 @@ import TextField, {Input} from '@material/react-text-field'
 import MaterialIcon from '@material/react-material-icon'
 import RestauranteFoto from '../../assets/restaurante-fake.png'
 import Slider from "react-slick"
-import {Container, Search, Logo, Wrapper, Map, TituloCarrosel, Carrosel} from './style'
-import {Card, CardRestaurante, Modal} from '../../components'
+import {Container, Search, Logo, Wrapper, TituloCarrosel, Carrosel} from './style'
+import {Card, CardRestaurante, Modal, Map} from '../../components'
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
-    const [modalOpened, setModalOpened] = useState(true)
+    const [modalOpened, setModalOpened] = useState(false)
 
     const settings = {
         dots: false,
@@ -47,7 +47,7 @@ const Home = () => {
                 <CardRestaurante/>
             </Container>
             <Map/>
-            <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}/>
+            {/* <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}/> */}
     </Wrapper>
     )
 }

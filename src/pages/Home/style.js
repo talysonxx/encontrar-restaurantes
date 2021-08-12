@@ -26,10 +26,10 @@ export const Logo = styled.img`
     margin-bottom: 15px;
 `
 
-export const  Map = styled.div`
-    background-color: red;
-    width: 1000px;
-`
+// export const  Map = styled.div`
+//     background-color: red;
+//     width: 1000px;
+// `
 
 export const Carrosel = styled(Slider)`
     .slick-slide {
