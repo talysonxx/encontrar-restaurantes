@@ -4,7 +4,7 @@ import logo from '../../assets/logo.svg'
 import TextField, {Input} from '@material/react-text-field'
 import MaterialIcon from '@material/react-material-icon'
 import RestauranteFoto from '../../assets/restaurante-fake.png'
-import Slider from "react-slick"
+import Slider from 'react-slick'
 import {Container, Search, Logo, Wrapper, TituloCarrosel, Carrosel} from './style'
 import {Card, CardRestaurante, Modal, Map} from '../../components'
 
@@ -17,7 +17,7 @@ const Home = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
         adaptiveHeight: true
@@ -45,14 +45,40 @@ const Home = () => {
                         onKeyPress={handleKeyPress}/>
                     </TextField>
                     <TituloCarrosel>Na sua Área</TituloCarrosel>
-                    <Carrosel {...settings}>
+                    {/* <Carrosel {...settings}>
                         {restaurants.map(restaurant => (
                         <Card
                         key={restaurant.place_id}
                         photo={restaurant.photo ? restaurant.photo[0].getUrl : RestauranteFoto}
                         title={restaurant.name}/>)
                         )}
-                    </Carrosel>
+                    </Carrosel> */}
+                    <Slider {...settings}>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                        <div>
+                            <img src={RestauranteFoto} alt="foto" />
+                        </div>
+                    </Slider>
                 </Search>
                 {restaurants.map(restaurant => <CardRestaurante restaurant={restaurant}/>)}
             </Container>
