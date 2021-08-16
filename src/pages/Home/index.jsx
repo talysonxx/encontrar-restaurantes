@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {useSelector} from 'react-redux'
 import logo from '../../assets/logo.svg'
 import TextField, {Input} from '@material/react-text-field'
 import MaterialIcon from '@material/react-material-icon'
@@ -9,7 +10,9 @@ import {Card, CardRestaurante, Modal, Map} from '../../components'
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
-    const [modalOpened, setModalOpened] = useState(false)
+    const [modalOpened, setModalOpened] = useState(true)
+    const [query, setQuery] = useState(null)
+    const {restaurants} = useSelector(state => state.restaurants)
 
     const settings = {
         dots: false,
@@ -18,6 +21,12 @@ const Home = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         adaptiveHeight: true
+    }
+
+    function handleKeyPress(event){
+        if(event.key === 'Enter'){
+            setQuery(inputValue)
+        }
     }
 
     return (
@@ -32,7 +41,8 @@ const Home = () => {
                     >
                         <Input style={{width: "340px"}}
                         value={inputValue}
-                        onChange={({target: {value}}) => setInputValue(value)} />
+                        onChange={({target: {value}}) => setInputValue(value)}
+                        onKeyPress={handleKeyPress}/>
                     </TextField>
                     <TituloCarrosel>Na sua Área</TituloCarrosel>
                     <Carrosel {...settings}>
@@ -44,9 +54,9 @@ const Home = () => {
                         <Card photo={RestauranteFoto} title="nothink"/>
                     </Carrosel>
                 </Search>
-                <CardRestaurante/>
+                {restaurants.map(restaurant => <CardRestaurante restaurant={restaurant}/>)}
             </Container>
-            <Map/>
+            <Map query={query}/>
             {/* <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}/> */}
     </Wrapper>
     )
