@@ -8,7 +8,8 @@ export const MapContainer = (props) => {
     const dispacth = useDispatch()
     const [map, setMap] = useState(null)
     const {google, query} = props
-    const initCenter = {lat: -27.0922364, lng: -52.6166878}
+    // 34.70348896226077, 135.47984596177918 大阪
+    const initCenter = {lat: 34.70348896226077, lng: 135.47984596177918}
 
     const {restaurants} = useSelector(state => state.restaurants)
 

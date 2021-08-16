@@ -15,7 +15,7 @@ const Home = () => {
     const {restaurants} = useSelector(state => state.restaurants)
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -46,12 +46,12 @@ const Home = () => {
                     </TextField>
                     <TituloCarrosel>Na sua Área</TituloCarrosel>
                     <Carrosel {...settings}>
-                        <Card photo={RestauranteFoto} title="nothink"/>
-                        <Card photo={RestauranteFoto} title="nothink"/>
-                        <Card photo={RestauranteFoto} title="nothink"/>
-                        <Card photo={RestauranteFoto} title="nothink"/>
-                        <Card photo={RestauranteFoto} title="nothink"/>
-                        <Card photo={RestauranteFoto} title="nothink"/>
+                        {restaurants.map(restaurant => (
+                        <Card
+                        key={restaurant.place_id}
+                        photo={restaurant.photo ? restaurant.photo[0].getUrl : RestauranteFoto}
+                        title={restaurant.name}/>)
+                        )}
                     </Carrosel>
                 </Search>
                 {restaurants.map(restaurant => <CardRestaurante restaurant={restaurant}/>)}

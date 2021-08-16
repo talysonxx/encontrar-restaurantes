@@ -18,7 +18,7 @@ const CardRestaurante = ({restaurant}) => (
             />
             <Endereco style={{marginTop: '4px'}}>{restaurant.vicinity || restaurant.formatted_address}</Endereco>
         </InfoRestaurante>
-        <ImgRestauranteFoto src={restauranteFoto} alt='Foto do restaurante'/>
+        <ImgRestauranteFoto src={restaurant.photos ? restaurant.photos[0].getUrl() : restauranteFoto} alt='Foto do restaurante'/>
     </Restaurante>
 )
 

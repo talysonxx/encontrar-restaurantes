@@ -37,7 +37,7 @@ export const Carrosel = styled(Slider)`
     }
 `
 
-export const TituloCarrosel = styled.div`
+export const TituloCarrosel = styled.h1`
     font-family: ${props => props.theme.fonts.regular};
     color: ${props => props.theme.colors.text};
     font-size: 24px;
