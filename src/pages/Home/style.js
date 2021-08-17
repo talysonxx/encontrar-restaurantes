@@ -45,3 +45,24 @@ export const TituloCarrosel = styled.h1`
     line-height: 29px;
     margin: 16px 0 0 0;
 `
+
+export const ModalTitle = styled.p`
+    margin-bottom: 10px;
+    margin-top: 10px;
+    letter-spacing: 0.11px;
+    font-family: ${props => props.theme.fonts.regular};
+    color: ${props => props.theme.colors.text};
+    line-height: 29px;
+    font-size: 24px;
+    font-weidth: bold;
+`
+
+export const ModalContent = styled.p`
+    margin-bottom: 10px;
+    letter-spacing: 0.11px;
+    font-family: ${props => props.theme.fonts.regular};
+    color: ${props => props.theme.colors.text};
+    line-height: 19px;
+    font-weidth: normal;
+    fonst-size: 16px;
+`

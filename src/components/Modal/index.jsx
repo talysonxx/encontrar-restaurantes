@@ -2,6 +2,12 @@ import React, {useEffect} from 'react'
 import Portal from './Portal'
 import {Overlay, Dialog} from './style'
 
+const styleDialog = {
+    display: 'flex',
+    'flex-direction': 'column',
+    'justify-content': 'center'
+}
+
 const Modal = ({children, open, onClose}) => {
     useEffect(() => {
         function onEsc(event){
@@ -27,7 +33,7 @@ const Modal = ({children, open, onClose}) => {
     return (
         <Portal>
             <Overlay onClick={onOverlayClick}>
-                <Dialog onClick={onDialogClick}>{children}</Dialog>
+                <Dialog style={styleDialog} onClick={onDialogClick}>{children}</Dialog>
             </Overlay>
         </Portal>
     )
