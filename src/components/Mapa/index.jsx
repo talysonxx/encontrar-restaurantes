@@ -83,7 +83,7 @@ export const MapContainer = (props) => {
     }
 
     return (
-        <Map style={{width: '70%', height: '100%'}} googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCwbj4fmqpd2E678L4HM6xD_pbT9qcp_hc&v=3.exp&libraries=geometry,drawing,places`}
+        <Map style={{width: '70%', height: '100%'}}
         google={google}
         centerAroundCurrentLocation
         zoom={15}
