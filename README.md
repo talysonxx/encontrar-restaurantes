@@ -1,4 +1,4 @@
-# Um projeto feito no bootcamp [MRV Front End SPA Developer](https://web.digitalinnovation.one/track/mrv-front-end-spa-developer) (digital innovation one)
+# Um projeto feito no bootcamp [MRV Front End SPA Developer](https://web.digitalinnovation.one/track/mrv-front-end-spa-developer) da [DIO](https://digitalinnovation.one/) (Digital Innovation One)
 
 ## Usando API do google maps para consultar restaurantes próximos
 
