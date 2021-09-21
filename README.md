@@ -1,3 +1,4 @@
+![Screenshot_1](https://user-images.githubusercontent.com/79946114/134237590-67b0f259-75e1-4896-8b2d-3e89e60346e4.png)
 # Um projeto feito no bootcamp [MRV Front End SPA Developer](https://web.digitalinnovation.one/track/mrv-front-end-spa-developer) da [DIO](https://digitalinnovation.one/) (Digital Innovation One)
 
 ## Usando API do google maps para consultar restaurantes próximos
